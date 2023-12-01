@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatellaSoft - Gallery</title>
+
+    <link rel="stylesheet" href="ss-gallery.css">
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 890px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis illum assumenda exercitationem magni rem
+            corporis nesciunt temporibus dolorem rerum similique, veritatis distinctio aspernatur eius libero provident
+            officiis maxime aperiam repellendus?</p>
+
+        <!--SatellaSoft Gallery-->
+        <div class="ss-gallery-container">
+            <div class="ss-gallery-image">
+                <img src="./img/hollow-01.jpg" alt="Desc 01" data-title="Desc 01">
+                <img src="./img/hollow-02.jpg" alt="Desc 02" data-title="Desc 02">
+                <img src="./img/hollow-03.jpg" alt="Desc 03" data-title="Desc 03">
+            </div>
+
+            <div class="ss-gallery-desc">
+                <p>Hello World!</p>
+            </div>
+
+            <div class="ss-gallery-controller">
+                <div>
+                    <span class="ss-gallery-counter">01/05</span>
+                </div>
+
+                <div class="ss-gallery-buttons">
+                    <button class="ss-gallery-arrow ss-arrow-left" onclick="navigate(false)"><img src="img/arrow.svg"
+                            alt="Voltar" width="32">
+                    </button>
+                    <button class="ss-gallery-arrow ss-arrow-right" onclick="navigate(true)"><img src="img/arrow.svg"
+                            alt="Avançar" width="32"></button>
+                </div>
+            </div>
+
+            <button class="ss-gallery-close" onclick="toggleModal(false)">X</button>
+        </div>
+        <!--SatellaSoft Gallery-->
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis illum assumenda exercitationem magni rem
+            corporis nesciunt temporibus dolorem rerum similique, veritatis distinctio aspernatur eius libero provident
+            officiis maxime aperiam repellendus?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis illum assumenda exercitationem magni rem
+            corporis nesciunt temporibus dolorem rerum similique, veritatis distinctio aspernatur eius libero provident
+            officiis maxime aperiam repellendus?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis illum assumenda exercitationem magni rem
+            corporis nesciunt temporibus dolorem rerum similique, veritatis distinctio aspernatur eius libero provident
+            officiis maxime aperiam repellendus?</p>
+    </div>
+
+    <script src="ss-gallery.js"></script>
+</body>
+
+</html>

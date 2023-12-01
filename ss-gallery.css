@@ -1,0 +1,163 @@
+.ss-gallery-container {
+    width: 100%;
+    height: 500px;
+    box-sizing: 0 0 10px #11111180;
+    margin: 15px 0;
+    position: relative;
+    font-size: 16px;
+}
+
+.ss-gallery-image {
+    height: 100%;
+}
+
+.ss-gallery-image img {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ss-gallery-desc {
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #1111118a;
+    color: #fff;
+    padding: 2px 0;
+}
+
+.ss-gallery-counter {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.ss-gallery-buttons {
+    text-align: right;
+    width: 100%;
+    margin-right: 15px;
+}
+
+.ss-gallery-arrow {
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.872);
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: ease 0.3s;
+    margin: 0 3px;
+    text-align: right;
+}
+
+.ss-gallery-arrow:hover {
+    background-color: #fff;
+}
+
+.ss-gallery-arrow:active {
+    background-color: #ccc;
+}
+
+.ss-gallery-arrow img {
+    fill: #fff;
+    display: inline;
+    width: 28px;
+    height: 28px;
+}
+
+.ss-arrow-right img {
+    rotate: -180deg;
+}
+
+.ss-gallery-controller {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.fade-in-image {
+    animation: fadeIn 1s;
+    transition: all 0.2s ease-in-out;
+}
+
+.ss-gallery-close {
+    display: none;
+    position: absolute;
+    top: 25px;
+    padding: 4px;
+    right: 25px;
+    width: 24px;
+    height: 24px;
+    line-height: 1px;
+    font-weight: bold;
+    border: none;
+    background-color: #eeeeeece;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s;
+    box-sizing: 0 0 5px #3d3d3d;
+}
+
+.ss-gallery-close:active{
+    background-color: #303030ce;
+}
+
+.ss-gallery-close:hover{
+    background-color: #868686ce;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 425px) {
+    .ss-gallery-image img {
+        height: 400px;
+    }
+
+    .ss-gallery-container {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.ss-gallery-container.modal {
+    position: absolute;
+    background-color: #111;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    display: flex;
+}
+
+.ss-gallery-container.modal .ss-gallery-close {
+    display: block;
+}
+
+.ss-gallery-container.modal .ss-gallery-image img {
+    height: 100%;
+    width: 100%;
+    max-width: 1500px;
+}
