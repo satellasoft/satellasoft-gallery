@@ -1,8 +1,11 @@
 'use strict'
 
-const delayTime = 10000
+//Start config
+const delayTime = 3000
 const usingLazy = true
+const showDesc = true
 var currentIndex = 0
+//End config
 
 var elements = []
 var container = null
@@ -23,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: item.getAttribute('data-title')
         })
     })
+
+    if (!showDesc)
+        descriptionContainer.style.display = 'none'
 
     createImage(elements[currentIndex])
 })
