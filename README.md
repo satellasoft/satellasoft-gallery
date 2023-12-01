@@ -1,6 +1,6 @@
-# Satellasoft Gallery
+# SatellaSoft Gallery
 
-**Satellasoft Gallery** is an open source image gallery project, with the possibility of rewind/forward and modal display. The gallery also displays a text description and the current image number.
+**SatellaSoft Gallery** is an open source image gallery project, with the possibility of rewind/forward and modal display. The gallery also displays a text description and the current image number.
 
 - Our site: **https://satellasoft.com**
 - Author: **Gunnar Correa**
