@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.push({
             url: item.getAttribute('src'),
             alt: item.getAttribute('alt'),
-            title: item.getAttribute('data-title')
+            title: item.getAttribute('data-title'),
+            clientWidth : null,
+            clientHeight : null,
         })
     })
 
