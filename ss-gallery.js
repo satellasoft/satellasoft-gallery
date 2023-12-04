@@ -3,7 +3,7 @@
 //Start config
 const delayTime = 3000
 const usingLazy = true
-const showDesc = true
+const showDesc = false
 var currentIndex = 0
 //End config
 
@@ -46,8 +46,6 @@ const toggleModal = (show) => {
 }
 
 const createImage = (item) => {
-
-    //Clear image before create new
     clearImage()
     changeCounter()
 
@@ -91,7 +89,11 @@ const navigate = (next) => {
 }
 
 const changeCounter = () => {
-    counter.innerText = `${currentIndex + 1}/${elements.length}`
+    counter.innerHTML = `<span>${currentIndex + 1}/${elements.length}</span>`
+}
+
+const toggleExpand = () => {
+    imageContainer.classList.toggle('ss-gallery-expand')
 }
 
 setInterval(() => {

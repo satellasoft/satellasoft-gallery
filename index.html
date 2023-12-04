@@ -42,13 +42,13 @@
                 <img src="./img/hollow-03.jpg" alt="Desc 03" data-title="Desc 03">
             </div>
 
-            <div class="ss-gallery-desc">
-                <p>Hello World!</p>
-            </div>
-
             <div class="ss-gallery-controller">
-                <div>
-                    <span class="ss-gallery-counter">01/05</span>
+                <div class="ss-gallery-counter">
+                    <p>01/05</p>
+                </div>
+
+                <div class="ss-gallery-desc">
+                    <p>Hello World!</p>
                 </div>
 
                 <div class="ss-gallery-buttons">
@@ -60,7 +60,10 @@
                 </div>
             </div>
 
-            <button class="ss-gallery-close" onclick="toggleModal(false)">X</button>
+            <div class="ss-gallery-helper-buttons">
+                <button class="ss-gallery-expand" onclick="toggleExpand()"><img src="./img/expand.svg" alt="Expand" title="Expand" width="24px" height="24px"></button>
+                <button class="ss-gallery-close" onclick="toggleModal(false)">X</button>
+            </div>
         </div>
         <!--SatellaSoft Gallery-->
 
