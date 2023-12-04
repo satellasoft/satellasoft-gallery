@@ -12,6 +12,7 @@ var container = null
 var imageContainer = null
 var descriptionContainer = null
 var counter = null
+var isOpen = false
 
 document.addEventListener('DOMContentLoaded', () => {
     imageContainer = document.querySelector('.ss-gallery-image')
@@ -37,10 +38,12 @@ const toggleModal = (show) => {
     if (show) {
         container.classList.add('modal')
         document.body.style.overflow = 'hidden'
+        isOpen = true
     }
     else if (!show) {
         container.classList.remove('modal')
         document.body.style.overflow = 'auto'
+        isOpen = false
     }
 
 }
@@ -96,7 +99,7 @@ const toggleExpand = () => {
     imageContainer.classList.toggle('ss-gallery-expand')
 }
 
-setInterval(() => {
+const interval = setInterval(() => {
     if ((currentIndex + 1) < elements.length)
         currentIndex++
     else
@@ -105,3 +108,9 @@ setInterval(() => {
     createImage(elements[currentIndex])
 
 }, delayTime)
+
+document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27)
+        toggleModal(false)
+}
