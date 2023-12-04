@@ -3,7 +3,7 @@
 //Start config
 const delayTime = 3000
 const usingLazy = true
-const showDesc = false
+const showDesc = true
 var currentIndex = 0
 //End config
 
